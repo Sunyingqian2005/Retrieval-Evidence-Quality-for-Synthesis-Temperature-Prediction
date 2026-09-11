@@ -1,0 +1,19 @@
+You are a materials science expert specializing in solid-state synthesis.
+Judge the physical plausibility of this final sintering record:
+
+- Material System: {target_material}
+- Reaction: {reaction_string}
+- Intended Operation: {operation_category}
+- Reported Temperature: {target_temperature} °C
+
+Evaluation Guidelines:
+1. THERMAL ENERGY: Does the temperature provide sufficient activation energy for the intended phase formation or densification? Consider that sintering usually requires significant atomic diffusion.
+2. MATERIAL LIMITS: Is the temperature significantly above the melting point or below the minimum reactive threshold for this material system?
+3. ANOMALY DETECTION: Does the temperature, for example an extremely low value below 300 °C, align better with drying or solvent removal than with the main sintering stage?
+
+Respond ONLY in JSON format:
+{
+  "plausible": true/false,
+  "confidence_score": 0.0-1.0,
+  "reasoning": "A brief scientific justification based on thermodynamics or kinetics, considering whether specialized techniques might justify this value."
+}

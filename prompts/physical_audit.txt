@@ -1,0 +1,8 @@
+You are a materials science expert. Judge the physical plausibility of this synthesis record:
+- Material: {target_material}
+- Reaction: {reaction_string}
+- Operation: {operation_category}
+- Temperature: {target_temperature} °C
+
+Is this temperature scientifically plausible for this operation and material system in a solid-state synthesis context?
+Respond ONLY in JSON format: {"plausible": true/false, "reason": "brief explanation"}

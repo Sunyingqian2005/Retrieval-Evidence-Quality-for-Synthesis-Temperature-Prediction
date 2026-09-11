@@ -1,0 +1,20 @@
+[
+  {
+    "doi": "10.0000/example.sintering",
+    "target_material": "SrFe12O19",
+    "reaction_string": "6 Fe2O3 + 1 SrCO3 == 1 SrFe12O19 + 1 CO2",
+    "operation_category": "Sintering",
+    "operation_string_raw": "sintered",
+    "target_temperature": 1200.0,
+    "units": "C"
+  },
+  {
+    "doi": "10.0000/example.calcination",
+    "target_material": "LiFePO4",
+    "reaction_string": "1 NH4H2PO4 + 0.5 Li2CO3 + 0.5 Fe2(C2O4)3·2H2O + 0.5 O2 == 1 LiFePO4 + 3.5 CO2 + 2.5 H2O + 1 NH3",
+    "operation_category": "Calcination",
+    "operation_string_raw": "calcined",
+    "target_temperature": 350.0,
+    "units": "C"
+  }
+]

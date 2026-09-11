@@ -1,0 +1,19 @@
+You are a materials science expert specializing in solid-state synthesis.
+Judge the physical plausibility of this final calcination record:
+
+- Material System: {target_material}
+- Reaction: {reaction_string}
+- Intended Operation: {operation_category}
+- Reported Temperature: {target_temperature} °C
+
+Evaluation Guidelines:
+1. THERMAL ENERGY: Does the temperature provide sufficient energy for precursor decomposition or initial phase nucleation? Calcination is typically a pre-reaction step that transforms precursors into oxides.
+2. REACTION LIMITS: Is the temperature high enough to trigger the desired solid-state reaction but low enough to avoid premature sintering or excessive grain growth?
+3. ANOMALY DETECTION: Does the temperature, for example a value below 300 °C, align better with drying, solvent removal, or degasification than with calcination?
+
+Respond ONLY in JSON format:
+{
+  "plausible": true/false,
+  "confidence_score": 0.0-1.0,
+  "reasoning": "A brief scientific justification based on thermodynamics or kinetics, considering whether specialized techniques might justify this value."
+}

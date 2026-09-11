@@ -1,0 +1,31 @@
+{
+  "tasks": ["sintering", "calcination"],
+  "seed": 42,
+  "evaluation_size": 1000,
+  "retrieved_examples": 40,
+  "threshold_celsius": [300.0, 2200.0],
+  "retrieval": {
+    "main": "raw_element_overlap",
+    "controlled_alternative": "element_set_jaccard",
+    "tie_break": "stable_candidate_pool_order"
+  },
+  "audits": ["physical", "type", "autonomous"],
+  "confidence_threshold": 0.7,
+  "failure_policy": "retain",
+  "audit_temperature": {
+    "physical": 0.0,
+    "type": 0.1,
+    "autonomous": 0.1
+  },
+  "prediction_temperature": 0.0,
+  "bootstrap_iterations": 5000,
+  "historical_auditor": "DeepSeek-V3",
+  "common_held_out_predictor": "DeepSeek-V4-Flash",
+  "audit_input_fields": [
+    "target_material",
+    "reaction_string",
+    "operation_category",
+    "target_temperature"
+  ],
+  "source_text_supplied_to_auditor": false
+}

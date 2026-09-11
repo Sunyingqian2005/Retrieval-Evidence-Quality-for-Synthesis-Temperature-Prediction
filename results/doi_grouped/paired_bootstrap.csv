@@ -1,0 +1,7 @@
+task,method,reference,n_common,delta_mae_c,ci_95_low_c,ci_95_high_c,iterations,significant_better
+calcination,composition_aware,fixed_random,1000,-19.2585,-25.035707499999997,-13.381165000000001,5000,True
+calcination,type_audit,fixed_random,1000,-17.7582,-23.335432499999996,-12.2083425,5000,True
+calcination,type_audit,composition_aware,1000,1.5003000000000002,-1.263422499999999,4.2611749999999935,5000,False
+sintering,composition_aware,fixed_random,1000,-12.3706,-18.988564999999998,-5.686260000000007,5000,True
+sintering,type_audit,fixed_random,1000,-12.029200000000001,-18.32134,-5.556337500000002,5000,True
+sintering,type_audit,composition_aware,1000,0.34140000000000087,-2.5508900000000003,3.2214724999999937,5000,False

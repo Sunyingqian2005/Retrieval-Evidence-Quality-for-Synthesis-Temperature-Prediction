@@ -1,0 +1,83 @@
+{
+  "experiment": "v4_on_original_v3_audit_conditioned_results",
+  "purpose": "Re-predict original V3 audit-conditioned test sets using the current DeepSeek endpoint; no audit calls are made.",
+  "audit_decisions": "historical DeepSeek-V3 retained datasets",
+  "seed": 42,
+  "test_size": 1000,
+  "k": 40,
+  "requested_prediction_model": "deepseek-chat",
+  "api_base_url": "https://api.deepseek.com",
+  "temperature": 0.0,
+  "json_mode": true,
+  "strategies": [
+    "type_audit",
+    "autonomous_audit"
+  ],
+  "tasks": {
+    "calcination": {
+      "type_audit": {
+        "audit_model": "DeepSeek-V3 (historical retained records)",
+        "prediction_model_requested": "deepseek-chat",
+        "test_file": "2019_calcination_operations_filtered_val_2_train_1000_llm_audited_bond.json",
+        "candidate_pool_file": "2019_calcination_operations_filtered_val_2_validation_rest_llm_audited_bond.json",
+        "test_size": 1000,
+        "candidate_pool_size": 5402,
+        "retrieval": "raw element-overlap, stable pool-order tie-break",
+        "k": 40,
+        "test_unique_doi": 935,
+        "pool_unique_doi": 4137,
+        "shared_unique_doi": 322,
+        "test_records_with_pool_doi": 364,
+        "test_records_exactly_duplicated_in_pool": 22
+      },
+      "autonomous_audit": {
+        "audit_model": "DeepSeek-V3 (historical retained records)",
+        "prediction_model_requested": "deepseek-chat",
+        "test_file": "2019_calcination_operations_filtered_val_2_train_1000_llm_audited_auto.json",
+        "candidate_pool_file": "2019_calcination_operations_filtered_val_2_validation_rest_llm_audited_auto.json",
+        "test_size": 1000,
+        "candidate_pool_size": 5935,
+        "retrieval": "raw element-overlap, stable pool-order tie-break",
+        "k": 40,
+        "test_unique_doi": 923,
+        "pool_unique_doi": 4570,
+        "shared_unique_doi": 352,
+        "test_records_with_pool_doi": 408,
+        "test_records_exactly_duplicated_in_pool": 20
+      }
+    },
+    "sintering": {
+      "type_audit": {
+        "audit_model": "DeepSeek-V3 (historical retained records)",
+        "prediction_model_requested": "deepseek-chat",
+        "test_file": "2019_sintering_operations_filtered_val_2_train_1000_llm_audited_bond.json",
+        "candidate_pool_file": "2019_sintering_operations_filtered_val_2_validation_rest_llm_audited_bond.json",
+        "test_size": 1000,
+        "candidate_pool_size": 4002,
+        "retrieval": "raw element-overlap, stable pool-order tie-break",
+        "k": 40,
+        "test_unique_doi": 936,
+        "pool_unique_doi": 3175,
+        "shared_unique_doi": 275,
+        "test_records_with_pool_doi": 310,
+        "test_records_exactly_duplicated_in_pool": 32
+      },
+      "autonomous_audit": {
+        "audit_model": "DeepSeek-V3 (historical retained records)",
+        "prediction_model_requested": "deepseek-chat",
+        "test_file": "2019_sintering_operations_filtered_val_2_train_1000_llm_audited_auto.json",
+        "candidate_pool_file": "2019_sintering_operations_filtered_val_2_validation_rest_llm_audited_auto.json",
+        "test_size": 1000,
+        "candidate_pool_size": 5334,
+        "retrieval": "raw element-overlap, stable pool-order tie-break",
+        "k": 40,
+        "test_unique_doi": 946,
+        "pool_unique_doi": 4141,
+        "shared_unique_doi": 305,
+        "test_records_with_pool_doi": 337,
+        "test_records_exactly_duplicated_in_pool": 21
+      }
+    }
+  },
+  "retrieval_element_parser": "pymatgen"
+}

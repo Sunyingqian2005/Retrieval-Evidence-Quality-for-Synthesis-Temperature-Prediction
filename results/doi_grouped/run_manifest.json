@@ -1,0 +1,85 @@
+{
+  "experiment": "task2_doi_grouped_strict_v4_results",
+  "seed": 42,
+  "test_size": 1000,
+  "k": 40,
+  "requested_model": "deepseek-chat",
+  "api_base_url": "https://api.deepseek.com",
+  "temperature": 0.0,
+  "json_mode": true,
+  "retrieval_element_parser": "pymatgen",
+  "methods": [
+    "fixed_random",
+    "composition_aware",
+    "type_audit"
+  ],
+  "audit_strategies": [
+    "type_audit"
+  ],
+  "tasks": {
+    "calcination": {
+      "split": "DOI-grouped split",
+      "seed": 42,
+      "source_file": "2019_calcination_operations_filtered_val_2.json",
+      "test_size": 1000,
+      "source_size": 8379,
+      "test_doi_groups": 713,
+      "pool_doi_groups": 5260,
+      "doi_overlap_count": 0,
+      "pool_sizes": {
+        "raw": 7379,
+        "threshold": 7345,
+        "type_audit": 6893
+      },
+      "test_unique_doi": 713,
+      "pool_unique_doi": 5260,
+      "test_records_with_pool_doi": 0,
+      "test_records_exactly_duplicated_in_pool": 0,
+      "audit_results": {
+        "type_audit": {
+          "audited_records": 7345,
+          "retained_records": 6893,
+          "rejected_records": 452,
+          "retained_on_failure": 0,
+          "retained_on_malformed_decision": 0,
+          "requested_model": "deepseek-chat",
+          "response_models": [
+            "deepseek-v4-flash"
+          ]
+        }
+      }
+    },
+    "sintering": {
+      "split": "DOI-grouped split",
+      "seed": 42,
+      "source_file": "2019_sintering_operations_filtered_val_2.json",
+      "test_size": 1000,
+      "source_size": 8341,
+      "test_doi_groups": 727,
+      "pool_doi_groups": 5296,
+      "doi_overlap_count": 0,
+      "pool_sizes": {
+        "raw": 7341,
+        "threshold": 7301,
+        "type_audit": 6840
+      },
+      "test_unique_doi": 727,
+      "pool_unique_doi": 5296,
+      "test_records_with_pool_doi": 0,
+      "test_records_exactly_duplicated_in_pool": 0,
+      "audit_results": {
+        "type_audit": {
+          "audited_records": 7301,
+          "retained_records": 6840,
+          "rejected_records": 461,
+          "retained_on_failure": 0,
+          "retained_on_malformed_decision": 0,
+          "requested_model": "deepseek-chat",
+          "response_models": [
+            "deepseek-v4-flash"
+          ]
+        }
+      }
+    }
+  }
+}

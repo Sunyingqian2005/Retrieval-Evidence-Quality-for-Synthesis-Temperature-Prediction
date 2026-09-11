@@ -1,0 +1,58 @@
+{
+  "experiment": "jaccard_fixed_test_v4_results",
+  "purpose": "Normalized element-set Jaccard retrieval baseline on the exact fixed common-held-out evaluation records.",
+  "seed": 42,
+  "test_size": 1000,
+  "k": 40,
+  "retrieval_metric": "|A intersection B| / |A union B|",
+  "tie_break": "stable candidate-pool order",
+  "candidate_pool": "unaudited fixed raw pool",
+  "baseline_experiment": "results/common_held_out (original local run path removed for publication)",
+  "requested_model": "deepseek-chat",
+  "api_base_url": "https://api.deepseek.com",
+  "temperature": 0.0,
+  "json_mode": true,
+  "retrieval_element_parser": "pymatgen",
+  "tasks": {
+    "calcination": {
+      "split": "record-level random split",
+      "seed": 42,
+      "source_file": "2019_calcination_operations_filtered_val_2.json",
+      "test_source_file": "2019_calcination_operations_filtered_val_2_train_1000_filtered_val_nofilter.json",
+      "raw_pool_source_file": "2019_calcination_operations_filtered_val_2_validation_rest_filtered_val_nofilter.json",
+      "test_size": 1000,
+      "source_size": 8379,
+      "pool_sizes": {
+        "raw": 7379,
+        "threshold": 7344
+      },
+      "test_unique_doi": 941,
+      "pool_unique_doi": 5381,
+      "test_records_with_pool_doi": 387,
+      "test_records_exactly_duplicated_in_pool": 26
+    },
+    "sintering": {
+      "split": "record-level random split",
+      "seed": 42,
+      "source_file": "2019_sintering_operations_filtered_val_2.json",
+      "test_source_file": "2019_sintering_operations_filtered_val_2_train_1000_filtered_val_nofilter.json",
+      "raw_pool_source_file": "2019_sintering_operations_filtered_val_2_validation_rest_filtered_val_nofilter.json",
+      "test_size": 1000,
+      "source_size": 8341,
+      "pool_sizes": {
+        "raw": 7341,
+        "threshold": 7295
+      },
+      "test_unique_doi": 947,
+      "pool_unique_doi": 5452,
+      "test_records_with_pool_doi": 413,
+      "test_records_exactly_duplicated_in_pool": 24
+    }
+  },
+  "baseline_response_models": [
+    "deepseek-v4-flash"
+  ],
+  "jaccard_response_models": [
+    "deepseek-v4-flash"
+  ]
+}

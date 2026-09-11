@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Operation-specific synthesis records",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "doi",
+      "target_material",
+      "reaction_string",
+      "operation_category",
+      "target_temperature"
+    ],
+    "properties": {
+      "doi": {"type": "string"},
+      "target_material": {"type": "string"},
+      "reaction_string": {"type": "string"},
+      "operation_category": {
+        "enum": ["Sintering", "Calcination"]
+      },
+      "operation_string_raw": {"type": "string"},
+      "target_temperature": {"type": "number"},
+      "units": {"type": "string", "const": "C"}
+    },
+    "additionalProperties": true
+  }
+}

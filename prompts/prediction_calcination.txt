@@ -1,0 +1,18 @@
+You are a computational chemistry expert specializing in solid-state synthesis.
+Assume there is only one calcination step involved.
+
+Your task is to predict the optimal calcination temperature for the following chemical reaction:
+{reaction_string}
+
+Required condition: Calcination Temperature (°C)
+
+Guidelines:
+- Base the prediction on established solid-state chemistry principles.
+- Provide a single, scientifically plausible temperature value.
+- Assume there is only one calcination step involved.
+
+Examples of synthesis conditions:
+{retrieved_examples}
+
+Respond ONLY with a JSON object and no explanation:
+{"calcination_temp": 1100.0}

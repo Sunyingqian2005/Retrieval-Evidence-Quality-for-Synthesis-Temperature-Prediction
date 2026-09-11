@@ -1,0 +1,140 @@
+{
+  "experiment": "task1_fixed_test_original_v3_pools_v4_results",
+  "seed": 42,
+  "test_size": 1000,
+  "k": 40,
+  "requested_model": "deepseek-chat",
+  "api_base_url": "https://api.deepseek.com",
+  "temperature": 0.0,
+  "json_mode": true,
+  "retrieval_element_parser": "pymatgen",
+  "methods": [
+    "fixed_random",
+    "composition_aware",
+    "threshold",
+    "physical_audit",
+    "type_audit",
+    "autonomous_audit"
+  ],
+  "audit_strategies": [],
+  "tasks": {
+    "calcination": {
+      "split": "record-level random split",
+      "seed": 42,
+      "source_file": "2019_calcination_operations_filtered_val_2.json",
+      "test_source_file": "2019_calcination_operations_filtered_val_2_train_1000_filtered_val_nofilter.json",
+      "raw_pool_source_file": "2019_calcination_operations_filtered_val_2_validation_rest_filtered_val_nofilter.json",
+      "test_size": 1000,
+      "source_size": 8379,
+      "pool_sizes": {
+        "raw": 7379,
+        "threshold": 7344,
+        "physical_audit": 6722,
+        "type_audit": 5624,
+        "autonomous_audit": 6100
+      },
+      "test_unique_doi": 941,
+      "pool_unique_doi": 5381,
+      "test_records_with_pool_doi": 387,
+      "test_records_exactly_duplicated_in_pool": 26,
+      "historical_v3_pools": {
+        "physical_audit": {
+          "audit_model": "DeepSeek-V3 (historical retained records)",
+          "old_test_part": "2019_calcination_operations_filtered_val_train_1000_llm_audited.json",
+          "old_validation_part": "2019_calcination_operations_filtered_val_validation_rest_llm_audited.json",
+          "old_test_part_size": 1000,
+          "old_validation_part_size": 6645,
+          "complete_old_retained_size": 7645,
+          "fixed_test_occurrences_removed": 923,
+          "candidate_pool_size": 6722,
+          "remaining_exact_signature_collisions": 25,
+          "exclusion_rule": "multiset occurrence subtraction"
+        },
+        "type_audit": {
+          "audit_model": "DeepSeek-V3 (historical retained records)",
+          "old_test_part": "2019_calcination_operations_filtered_val_2_train_1000_llm_audited_bond.json",
+          "old_validation_part": "2019_calcination_operations_filtered_val_2_validation_rest_llm_audited_bond.json",
+          "old_test_part_size": 1000,
+          "old_validation_part_size": 5402,
+          "complete_old_retained_size": 6402,
+          "fixed_test_occurrences_removed": 778,
+          "candidate_pool_size": 5624,
+          "remaining_exact_signature_collisions": 23,
+          "exclusion_rule": "multiset occurrence subtraction"
+        },
+        "autonomous_audit": {
+          "audit_model": "DeepSeek-V3 (historical retained records)",
+          "old_test_part": "2019_calcination_operations_filtered_val_2_train_1000_llm_audited_auto.json",
+          "old_validation_part": "2019_calcination_operations_filtered_val_2_validation_rest_llm_audited_auto.json",
+          "old_test_part_size": 1000,
+          "old_validation_part_size": 5935,
+          "complete_old_retained_size": 6935,
+          "fixed_test_occurrences_removed": 835,
+          "candidate_pool_size": 6100,
+          "remaining_exact_signature_collisions": 21,
+          "exclusion_rule": "multiset occurrence subtraction"
+        }
+      },
+      "prediction_model_note": "Only downstream prediction uses the current DeepSeek endpoint; semantic audit decisions are the retained records produced by V3."
+    },
+    "sintering": {
+      "split": "record-level random split",
+      "seed": 42,
+      "source_file": "2019_sintering_operations_filtered_val_2.json",
+      "test_source_file": "2019_sintering_operations_filtered_val_2_train_1000_filtered_val_nofilter.json",
+      "raw_pool_source_file": "2019_sintering_operations_filtered_val_2_validation_rest_filtered_val_nofilter.json",
+      "test_size": 1000,
+      "source_size": 8341,
+      "pool_sizes": {
+        "raw": 7341,
+        "threshold": 7295,
+        "physical_audit": 6584,
+        "type_audit": 4417,
+        "autonomous_audit": 5565
+      },
+      "test_unique_doi": 947,
+      "pool_unique_doi": 5452,
+      "test_records_with_pool_doi": 413,
+      "test_records_exactly_duplicated_in_pool": 24,
+      "historical_v3_pools": {
+        "physical_audit": {
+          "audit_model": "DeepSeek-V3 (historical retained records)",
+          "old_test_part": "2019_sintering_operations_filtered_val_2_train_1000_llm_audited.json",
+          "old_validation_part": "2019_sintering_operations_filtered_val_2_validation_rest_llm_audited.json",
+          "old_test_part_size": 1000,
+          "old_validation_part_size": 6495,
+          "complete_old_retained_size": 7495,
+          "fixed_test_occurrences_removed": 911,
+          "candidate_pool_size": 6584,
+          "remaining_exact_signature_collisions": 23,
+          "exclusion_rule": "multiset occurrence subtraction"
+        },
+        "type_audit": {
+          "audit_model": "DeepSeek-V3 (historical retained records)",
+          "old_test_part": "2019_sintering_operations_filtered_val_2_train_1000_llm_audited_bond.json",
+          "old_validation_part": "2019_sintering_operations_filtered_val_2_validation_rest_llm_audited_bond.json",
+          "old_test_part_size": 1000,
+          "old_validation_part_size": 4002,
+          "complete_old_retained_size": 5002,
+          "fixed_test_occurrences_removed": 585,
+          "candidate_pool_size": 4417,
+          "remaining_exact_signature_collisions": 16,
+          "exclusion_rule": "multiset occurrence subtraction"
+        },
+        "autonomous_audit": {
+          "audit_model": "DeepSeek-V3 (historical retained records)",
+          "old_test_part": "2019_sintering_operations_filtered_val_2_train_1000_llm_audited_auto.json",
+          "old_validation_part": "2019_sintering_operations_filtered_val_2_validation_rest_llm_audited_auto.json",
+          "old_test_part_size": 1000,
+          "old_validation_part_size": 5334,
+          "complete_old_retained_size": 6334,
+          "fixed_test_occurrences_removed": 769,
+          "candidate_pool_size": 5565,
+          "remaining_exact_signature_collisions": 16,
+          "exclusion_rule": "multiset occurrence subtraction"
+        }
+      },
+      "prediction_model_note": "Only downstream prediction uses the current DeepSeek endpoint; semantic audit decisions are the retained records produced by V3."
+    }
+  }
+}

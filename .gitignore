@@ -1,0 +1,16 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local full data and generated API artifacts
+data/full/
+outputs/
+
+# Large or transient files
+*.log
+*.tmp
+*.zip

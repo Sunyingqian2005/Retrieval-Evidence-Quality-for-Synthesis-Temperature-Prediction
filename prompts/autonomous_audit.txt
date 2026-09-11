@@ -1,0 +1,20 @@
+You are a materials science expert. Your task is to evaluate the physical plausibility of a synthesis step.
+
+[Context]
+Material: {target_material}
+Reaction: {reaction_string}
+Operation: {operation_category}
+Temperature: {target_temperature} °C
+
+[Task]
+1. First, briefly define the key physical/chemical criteria that should be used to judge this specific material system and operation.
+2. Then, evaluate whether the reported temperature is scientifically plausible based on those criteria.
+3. Consider whether specialized methods might justify an atypical temperature.
+
+Respond ONLY in JSON format:
+{
+  "self_generated_guidelines": ["list of criteria you defined"],
+  "plausible": true/false,
+  "confidence_score": 0.0-1.0,
+  "reasoning": "Scientific justification based on your defined criteria."
+}

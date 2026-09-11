@@ -1,0 +1,17 @@
+task,method,reference,n_common,delta_mae_c,ci_95_low_c,ci_95_high_c,iterations,significant_better
+calcination,composition_aware,fixed_random,1000,-19.4399,-26.195137499999994,-12.682875000000001,5000,True
+calcination,threshold,composition_aware,1000,-0.36400000000000016,-1.6989250000000002,1.0103024999999999,5000,False
+calcination,physical_audit,composition_aware,1000,0.7263000000000001,-4.1501025,5.736014999999994,5000,False
+calcination,type_audit,composition_aware,1000,1.941,-3.8527875,7.732134999999998,5000,False
+calcination,autonomous_audit,composition_aware,1000,2.475,-3.0731225,7.956534999999997,5000,False
+calcination,physical_audit,threshold,1000,1.0903,-3.8293600000000003,6.225382499999996,5000,False
+calcination,type_audit,threshold,1000,2.305,-3.5059074999999997,8.114569999999992,5000,False
+calcination,autonomous_audit,threshold,1000,2.839,-2.7267349999999992,8.506664999999995,5000,False
+sintering,composition_aware,fixed_random,1000,-24.016399999999994,-31.402222499999997,-16.8163775,5000,True
+sintering,threshold,composition_aware,1000,0.12,-2.0537024999999995,2.4393174999999983,5000,False
+sintering,physical_audit,composition_aware,1000,-1.724099999999999,-7.1139424999999985,3.5021924999999987,5000,False
+sintering,type_audit,composition_aware,1000,11.496100000000002,4.77631,18.094272499999995,5000,False
+sintering,autonomous_audit,composition_aware,1000,-1.6457000000000002,-7.251252499999999,3.7998849999999926,5000,False
+sintering,physical_audit,threshold,1000,-1.844099999999999,-7.028955,3.2187824999999926,5000,False
+sintering,type_audit,threshold,1000,11.376100000000001,4.6560825,17.8351725,5000,False
+sintering,autonomous_audit,threshold,1000,-1.7657000000000003,-6.967119999999999,3.2495074999999995,5000,False

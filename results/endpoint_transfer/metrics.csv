@@ -1,0 +1,5 @@
+task,strategy,evaluation_population,test_size,valid_predictions,candidate_pool_size,mae_c,rmse_c,r2,requested_model,response_models
+calcination,type_audit,original_v3_audit_conditioned,1000,1000,5402,86.61755000000004,129.02481186771797,0.563910172767615,deepseek-chat,deepseek-v4-flash
+calcination,autonomous_audit,original_v3_audit_conditioned,1000,1000,5935,89.38080000000001,135.98520487538354,0.5469811629186817,deepseek-chat,deepseek-v4-flash
+sintering,type_audit,original_v3_audit_conditioned,1000,1000,4002,76.67960000000001,112.03507758733427,0.7080538908041593,deepseek-chat,deepseek-v4-flash
+sintering,autonomous_audit,original_v3_audit_conditioned,1000,1000,5334,82.06349999999996,121.51019436656343,0.7306050017056469,deepseek-chat,deepseek-v4-flash
